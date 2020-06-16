@@ -1,0 +1,218 @@
+@media(min-width:1200px) and (max-width:1299.9px){
+    .overview_btn, .website_btn{
+        width: 110px;
+    }
+    .bonus_item{
+        padding: 15px 10px 10px 15px;
+    &_img{
+        margin-bottom: 15px;
+        max-width: 80px;
+    }
+    &_size{
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+}
+    .match_item{
+        &_text{
+            font-size: 12px;
+        }
+        &_odds{
+            width: 100px;
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+}
+@media(max-width:1199.9px){
+    main{
+        padding-top: 176px;
+        padding-bottom: 100px;
+        &>.container{
+            flex-wrap: wrap;
+        }
+    }
+    .match_section,.bonuses_section{
+        width: 100%;
+    }
+    header{
+        padding-top: 40px;
+         .container{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .match_section{
+        margin-bottom: 105px;
+    }
+    .bonuses_section_title{
+        padding-left: 0;
+        &::after{
+            display: none;
+        }
+    }
+    .bonus_item{
+        min-width: 102%;
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        &::after{
+            @include after;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.5;
+            transition: all 0.5s ease;
+        }
+        &_wrap{
+            margin-bottom: 0;
+            display: inline-flex;
+            justify-content: center;
+            transition: 0.5s all ease;
+            &.swiper-slide-active{
+                position: relative;
+                z-index: 20;
+                opacity: 1;
+                .bonus_item::after{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .bonuses_section_content{
+        max-width: 880px;
+        margin: 0 auto;
+    }
+    .bonuses_section{
+        .load_more_btn{
+            display: none;
+        }
+    }
+    .bonus_item_wrap.swiper-slide-next,.bonus_item_wrap.swiper-slide-prev{
+        opacity: 1;
+        z-index: 15;
+
+        }
+    
+    .swiper-slide{
+        opacity: 0;
+    }
+    .bonus_item_wrap.swiper-slide-next{
+        .bonus_item{
+            transform: translate(-15px,0);
+        } 
+    }
+    .bonus_item_wrap.swiper-slide-prev{
+        .bonus_item{
+            transform: translate(15px,0);
+        } 
+    }
+    .swiper-pagination-bullet{
+        background: #8186A8;
+        border-radius: 2px;
+        width: 14px;
+        height: 4px;
+        transition: 0.5s all ease;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active{
+        background: #603ABB;
+        width: 24px;
+    }
+    .bonuses_section_title{
+        margin-bottom: 35px;
+    }
+}
+
+@media(max-width:991.9px){
+    .match_section_row{
+        justify-content: space-around;
+    }
+    .match_item{
+        width: 50%;
+    }
+    .top_banner{
+        height: 65px;
+        margin-bottom: -31px;
+    }
+    main{
+        padding-top: 130px;
+        padding-bottom: 70px;
+    }
+    .bonus_item{
+        min-width: unset;
+    }
+    .bonus_item_wrap.swiper-slide-next,.bonus_item_wrap.swiper-slide-prev{
+        .bonus_item{
+            transform: none;
+        }
+    }
+    .bonus_item::after{
+        display: none;
+    }
+}
+@media(max-width:767.9px){
+    .match_item{
+        width: 100%;
+    }
+    .match_section_row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .load_more_btn{
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .match_section_filters a:not(:last-child){
+        margin-right: 20px;
+    }
+    .match_section_filters{
+        padding-right: 0;
+    }
+    .match_section{
+        margin-bottom: 60px;
+    }
+}
+@media(max-width:575.9px){
+    .container{
+        padding: 0 15px;
+    }
+    header{
+        padding-top: 25px;
+    }
+    .top_banner{
+        height: 45px;
+        margin-bottom: -24px;
+        img{
+            max-width: 20px;
+        }
+    }
+    main{
+        padding-top: 70px;
+    }
+    .match_section_header{
+       flex-wrap: wrap;
+    }
+    .match_section{
+        &_title{
+            font-size: 14px;
+            padding-left: 25px;
+            margin-bottom: 20px;
+            &:after{
+            height: 2px;
+            width: 15px;
+            }
+        }  
+        &_filters{
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+        }
+    }
+    .bonuses_section_title{
+        font-size: 14px;
+    }
+}
